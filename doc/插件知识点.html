@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery插件</title>
+	<script>
+		/*
+			本节大纲
+				1.了解插件
+				2.使用插件
+				3.编写插件
+
+			1.了解插件
+				1）什么是插件
+				插件(Plugin)也称为jQuery的扩展。以jQuery核心代码为基础编写的符合一定规范的应用程序。通过js文件的方式引用。
+
+				2）插件分类
+				UI类、表单及验证类、输入类、特效类、Ajax类、滑动类、图形图像类、导航类、综合工具类、动画类等等
+
+				3）常用插件： 
+				jqueryUI //官方插件，功能多且全面，逛网：www.jqueryui.com
+				jquery.validation //表单验证插件,官网：https://jqueryvalidation.org/
+				jquery.easyUI //是一组基于jQuery的UI插件集合,Demo：http://www.jeasyui.net/
+				bootstrap  //是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目，官网：http://v3.bootcss.com/
+
+			2.使用插件
+				引入插件的步骤
+					1）引入jquery.js文件，必须在所有插件之前引入
+					2）引入插件
+					3）引入插件相关文件，比如样式、语言包等
+
+				[案例]jqueryUI
+				[案例]jquery.validation
+
+			3.编写jquery插件
+				1）插件形式分为3类：
+					a. 封装对象方法插件
+					b. 封装全局函数插件，如$.each,$.map,$.makeArray...
+					c. 选择器插件(类似于.find())
+
+				2）自定义插件的规范（降低各种插件之间的冲突，减少错误机率）
+					1. 命名规范：jquery.插件名.js
+					2. 插件中的this应该指向jQuery实例
+					3. 使用this.each()迭代元素,为了实现多个调用
+					4. 插件内部必须返回jQuery实例(this)，便于链式调用
+					5. 所有的对象法附加在jQuery.fn对象(jQuery.prototype)上面，所有全局函数附加在jquery上
+					6. 所有的方法或插件必须用分号结尾，避免出问题,为了保证插件的安全性，也可以在插件开始的地方加分号
+					7. 避免插件内部的$冲突，请传递jQuery($并不是总等于jQuery，另外其他js框架也可能使用$)
+
+					最终格式：;(function($){$.fn.插件名=function(){}})(jQuery);
+
+				3）其他
+					$.extend([d],target,obj1,obj2,...,[objN])  //扩展json对象或jQuery对象本身。用来扩展jQuery全局函数
+						1>用obj1-objN对象来扩展target对象
+						2>只有一个参数时，用来扩展jQuery全局函数：$.extend({'hobby':'撸串'})
+							$.ajax,$.map,$.each
+						3>d:是否深拷贝,布尔类型（true,false）
+
+					$.fn.extend()  //扩展 jQuery元素集合提供新的方法（扩展jQuery原型对象，通常用来制作插件）。
+
+					匿名函数传参的方式在内部使用$：
+					(function($){
+						//这里写插件代码
+					})(jQuery);
+
+		 */
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
