@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+    </head>
+    <body>
+        <script src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+        <script src="./apitizer-master/apitizer.min.js"></script>
+        <script>
+        var schema = {
+            type : "object",
+            properties : {
+                id : {
+                    type : "integer"
+                },
+                username : {
+                    type : "string"
+                },
+                password : {
+                    type : "string"
+                }
+            }
+        }, userStore;
+
+        apitizer.addSchema('user', schema);
+        userStore = apitizer.schemaStore('user', 0, {
+            id : apitizer.types.autoincrement()
+        })
+
+        userStore.add({
+            username : 'retro',
+            password : {
+                a: 'a',
+                b: 'b'
+            }
+        });
+
+        apitizer.fixture('POST /login', function(params){
+            var users = userStore.db(params) // Search the data in the store's database
+            if(users.count() === 0){
+                throw {errors: ['Wrong credentials'], status: 401}
+            } else {
+                return users.first();
+            }
+        });
+
+        $.post('/login', {
+            username : 'asf',
+            password : 1338
+        }).then(function(data){
+            $('<pre>').text(JSON.stringify(data, null, 4))
+            .appendTo('body');
+        }, function(error){
+
+        });
+
+        
+        </script>
+    </body>
+</html>

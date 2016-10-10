@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录-亲亲宝贝商城</title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<script src="../js/jquery-1.12.0.js"></script>
+		<!--<script src="../js/login.js"></script>-->
+		<script src="../js/login2.js"></script>
+		<script src="../assets/jquery.cookie.js"></script>
+		<script>
+			$(function() {
+				$(".mj-login-sprite-btn").on("click", function() {
+					var $userName = $("#yzusername").val();
+					var $psw = $("#pass").val();
+					//设置cookie
+					$.cookie("userName", $userName, {
+						expries: 7
+					});
+					$.cookie("psw", $psw, {
+						expries: 7
+					});
+				});
+				//获取cookie
+				$("#member").on("click", function() {
+					var $userInfor = $.cookie("userName");
+					var $userPsw = $.cookie("psw");
+					if($(this).is(':checked')) {
+						$("#yzusername").val($userInfor);
+						$("#pass").val($userPsw);
+					}
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="login">
+			<!--login注册页头部-->
+			<div class="login-header">
+				<a href="/project/src/index.html">
+					<div class="logo">
+						<img src="../img/reg/logo265-75-d.gif" alt="亲亲宝贝网上商城" class="vimgb">
+					</div>
+				</a>
+				<div class="header-fr"></div>
+			</div>
+			<!--login-->
+			<div class="login-content">
+				<div class="login-banner">
+					<a href="/project/src/index.html">
+						<img src="../img/login/loginbigbg.png" width="480" height="353" />
+					</a>
+				</div>
+				<div class="login-infor">
+					<p class="login-tit"><span class="fb">
+                                亲亲宝贝商城
+               </span> ,欢迎回来！请登录
+					</p>
+					<p class="login-usename">
+						<input id="yzusername" name="username" type="text" class="login-input" value="用户名/手机号/邮箱">
+						<!-- <label for="yzusername" class="">用户名/手机号/邮箱</label>-->
+					</p>
+					<p class="login-error" style="visibility: visible;">请输入您的登录名</p>
+					<p class="loginget-password">
+						<input id="pass" name="password" type="password" class="login-input-hover" placeholder="密码">
+						<!--<label for="pass" class="">密码</label>-->
+					</p>
+					<p class="login-error f12" style="visibility: hidden">请输入您的密码</p>
+					<input name="reffer" id="reffer" type="hidden" value="">
+					<!--验证码-->
+					<!-- <p id="yantishi">验证码输入错！</p>-->
+					<p class="login-identifying" style="display: none;">
+						<input id="pass1" type="text" class="login-input pl10 yahei" value='' style="width: 130px;color: #000;font-size: 14px;">
+						<span id="verifyimage"></span>
+						<a id="huanyizhang" class="login-cannot vm f12" style="cursor: pointer">换一张</a>
+					</p>
+					<span></span>
+					<p id="tijiao" class="login-submit">
+						<input style="cursor: pointer" type="submit" class="mj-login-sprite-btn f16 yahei" value="登录"></p>
+					<span id="login"></span>
+					<p class="mt15">
+						<span class="checkbox vm f12 lh100">
+                            <input type="checkbox" name="member" id="member" class="mj-login-sprite vm" value="member">
+                            	记住用户名
+                        </span>
+						<span class="wangji fr vm" style="margin-left: 84px;">
+                            <input type="hidden" value="" id="url">
+                            <a href="#" class="wangji-real vm f12">忘记密码？</a>
+                            <a href="/project/src/html/register.html" class="link-register  vm f12" style="color: #f10180;">免费注册</a>
+                        </span>
+					</p>
+					<div class="link-for-login mt30 f12 lh200">
+						<p class="red-line w"></p>
+						<p class="link-for-icon" style="position: relative; padding-left: 120px; margin-top: 20px;">
+							<span style="position: absolute; left: 0px; top: 10px;">合作网站账号登录：</span>
+							<a class="icon-weibo mj-login-sprite ls-ls" onclick="window.open('https://api.weibo.com/oauth2/authorize?client_id=370284481&redirect_uri=http%3A%2F%2Fwww.qinqinbaby.com%2Fweibo%2Fcallback.php&response_type=code');" style="cursor: pointer;"></a>
+							<a class="icon-qq mj-login-sprite ls-ls1" onclick="window.open('https://graph.qq.com/oauth/show?which=Login&display=pc&response_type=code&client_id=101151617&redirect_uri=www.qinqinbaby.com/Home/Passport/callback?binding=2&state=85f8cfd0f8e1006d4812f1f672618247&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr');" style="cursor: pointer;"></a>
+							<a onclick="window.open('https://open.weixin.qq.com/connect/qrconnect?appid=wx0f33b05f5c9b51ef&redirect_uri=http%3A%2F%2Fwww.qinqinbaby.com%2FHome%2FPassport%2Fweixin&scope=snsapi_login&response_type=code&state=123123#wechat_redirect');" class="icon-weixin mj-login-sprite ls-ls2" style="cursor: pointer;"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+			<div class="login-footer">
+				<p class="footer-about">
+					<a href="http://www.qinqinbaby.com/home/footer/about" target="_blank">关于我们</a><span style="font-size: 12px">|</span>
+					<a href="http://www.qinqinbaby.com/home/footer/touch" target="_blank">联系我们</a><span style="font-size: 12px">|</span>
+					<a href="http://www.qinqinbaby.com/home/footer/job" target="_blank">招贤纳士</a><span style="font-size: 12px">|</span>
+					<a href="http://www.qinqinbaby.com/home/footer/zhaoshang" target="_blank">商家入驻</a><span style="font-size: 12px">|</span>
+					<a href="http://www.qinqinbaby.com/home/footer/friendlink" target="_blank">友情链接</a><span style="font-size: 12px">|</span>
+				</p>
+				<p class="footer-right">© 亲亲宝贝网2003-2014 qinqinbaby.com All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公安网备11010802015478号 京ICP备11017831号</p>
+			</div>
+		</div>
+		<script src="../assets/js.KinerCode.js"></script>
+		<script>
+			//js验证码；
+			var inpTake = document.getElementById("pass1");
+			var tiShi = document.getElementById("yantishi");
+			var code = document.getElementById("verifyimage");
+			var code1 = document.getElementById("huanyizhang");
+			angin();
+
+			function angin() {
+				var c = new KinerCode({
+					len: 4, //验证码长度；
+					chars: [
+						1, 2, 3, 4, 5, 6, 7, 8, 9, 0,
+						'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+						'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+					], //指定验证码词典，提供搜索；
+					question: false, //经典模式选择false；
+					copy: false, //是否允许复制；
+					bgColor: "", //背景色【与背景图任选其一】
+					bgImg: "../img/reg/yanzheng.jpg", //背景图，背景色会失效
+					randomBg: false,
+					inputArea: inpTake, //输入验证码的input对象绑定，
+					codeArea: code, //验证码放置的区域【HTMLDivElement 】
+					click2refresh: true, //是否点击验证码刷新验证码
+					false2refresh: true, //在填错验证码后是否刷新验证码
+					validateEven: "blur", //触发验证的方法名，如click，blur等
+					validateFn: function(result, code) { //验证回调函数
+						if(result) {
+							inpTake.style.borderColor = "#bfbdbf";
+						} else {
+							inpTake.style.borderColor = "#f20266";
+						}
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

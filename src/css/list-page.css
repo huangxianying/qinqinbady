@@ -1,0 +1,71 @@
+/*大的div*/
+#mian-page{width: 100%;height: auto;margin: 0 auto;}
+/*商品内容页*/
+.goods-wrap{width:100%;height: auto;background: #f0fbfd;padding-top: 16px;}
+/*.goods-wrap:after{content: ',';display: block;overflow: hidden;overflow: visible;clear: both;}*/
+.goods-wrap .goods-main{width: 1000px;height: auto;background: #fff;margin-top: 16px;margin: 0 auto;}
+.goods-main:after{content: ',';display: block;overflow: hidden;overflow: visible;clear: both;}
+.goods-wrap .goods-main .goods-nav{width: 100%;height: auto;}
+.goods-wrap .goods-main .goods-nav .dlwp{width: 973px;height: auto;margin-left: 20px;position: relative;}
+.goods-wrap .goods-main .goods-nav .dlwp .dlwp-f{width: 100%;height: 72px;border-bottom: 1px dashed #ccc;}
+.goods-wrap .goods-main .goods-nav .dlwp .f1{width: 38px;height: auto;float: left;font-weight: 600;color: #000;line-height: 36px;}
+.goods-wrap .goods-main .goods-nav .dlwp  dd{width:842px;height:auto;float: left;}
+.goods-wrap .goods-main .goods-nav .dlwp  a{display:inline-block;line-height: 36px;margin-right: 20px;color: #000;}
+.goods-wrap .goods-main .goods-nav .dlwp  a:hover{color: #0cc;}
+.goods-wrap .goods-main .goods-nav .showbtn{line-height: 30px;color: #0cc;position: absolute;top:4px;right: 0px;cursor: pointer;}
+.goods-wrap .goods-main .goods-nav .brand{width: 973px;height: auto;border-bottom: 1px dashed #ccc;position: relative;}
+.goods-wrap .goods-main .goods-nav .brand:after{content: ',';display: block;overflow: hidden;overflow: visible;clear: both;}
+.goods-main .goods-nav .page{width: 973px;height:30px;margin: 0 auto;padding: 15px 0px 14px 0px;float: left;margin-left: 20px;}
+.goods-main .goods-nav .page .procheckby>a{float: left;width: 70px;height: 28px;line-height: 28px;text-align: center;border: 1px solid #ddd;color: #444;margin-left: -1px;position: relative;top:0;left: 0;z-index: 1;;}
+.goods-main .goods-nav .page .procheckby>a:hover{color: #0cc;border: 1px solid #0cc;z-index: 5;}
+.goods-nav .page .procheckby>a b{width: 9px;height: 12px;display: inline-block;background: url(../img/list-img/arrow.png) no-repeat -11px 0;vertical-align: middle;}
+.goods-nav .page .procheckby>a:hover b{background: url(../img/list-img/arrow.png) no-repeat 0 0 ;}
+.goods-main .goods-nav .page .procheckby .just-have{width: 110px;height: 30;margin-left: 10px;}
+.page-inner{width: 330px;height: 32px;float: right;}
+.page-inner>a{display: inline-block;width: 30px;height: 30px;border: 1px solid #ccc;color:#666;line-height: 30px;text-align: center;}
+.page-inner>a:hover{border: 1px solid #73dff4;color: #14b3c9;}
+.page-inner .page-first{border: 1px solid #969696;font-size: 14px;font-weight: bold;color: #707070;}
+.page-inner .page-first:hover{background: #666;color: #fff;}
+.page-inner .page-last{border: 1px solid #969696;font-size: 14px;font-weight: bold;color: #707070;}
+.page-inner .page-last:hover{background: #666;color: #fff}
+
+/*商品列表内容*/
+.goods-choose{width: 996px;height: auto;background-color:#fff ;margin: 0 auto;margin-top: 18px;padding:9px 0 130px 4px ;position:relative;}
+.goods-choose:after{content: ',';display: block;overflow: hidden;overflow: visible;clear: both;}
+.goods-choose #proactive{width: 100%;height: auto;}
+.goods-choose #proactive li{width: 225px;height: 287px;float: left;position: relative;top: 0;left: 0;border: 1px solid #f5f5f5;margin:9px}
+.goods-choose #proactive li .ptxt{width:225px;line-height: 20px;padding-left: 7px;padding-top: 5px;height: 20px;overflow: hidden;}
+.goods-choose #proactive li .price{height: 29px;line-height: 28px;color: #fd8d08;text-indent: 7px;}
+.goods-choose #proactive li .price>span{padding-right: 5px;color: #fc0;font-size: 14px;}
+.goods-choose #proactive li .pro-img{width: 225px;height: 225px;overflow: hidden;}
+li.active{z-index: 2;}
+.prowpactive{border: 2px solid #f49454;position: absolute;left: -2px;top: -2px;z-index: 2;box-shadow: 0px 3px 5px rgba(0,0,0,0.28);}
+.prowpactive p{height: auto;}
+.prowpactive dl{display: block;}
+.goods-choose #proactive li .price del{color: #666;margin-left: 6px;line-height: 28px;height: 28px;margin-left: 10px;}
+.goods-choose #proactive li .act{width: 225px;height: 300;border: 1px solid yellow;}
+/*分页*/
+.goods-choose .page{width: 100%;height: 30px;padding-bottom: 110px;position: absolute;bottom: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

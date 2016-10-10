@@ -1,0 +1,39 @@
+
+/*大的div*/
+#index-main{width: 100%;height: auto;margin: 0 auto;}
+
+/*homemain 主要部分*/
+.homemain{width: 100%;height: auto;}
+/*sec-mian 部分*/
+.homemain .sec-main{width: 100%;height: 729px;background: url(img/mdbg.png) no-repeat center center;position: relative;}
+.homemain .inner{width: 1106px;height: 635px;position: absolute;left: 158px;top: 52px;}
+.homemain .inner .phone{width: 276px;height: 592px;background: url(../img/index-img/phonesm.png) no-repeat center center;position: relative;}
+.homemain .inner .phone .phone_inner{width: 236px;height: 421px;overflow: hidden;position:absolute;left: 22px;top: 81px;}
+.homemain .inner .phone .phone_inner img{width: 236px;height: 421px;}
+.homemain .inner .phone .phone_inner>ul{position: absolute;left: 0;top: 0;}
+.homemain .inner .inner_tp{width: 830px;height: auto;position: absolute;right: 0;top: 0;}
+.homemain .inner .inner_tp .inner_txt{width: 100%;height: 86px;background: url(../img/index-img/qinqintext.png) no-repeat 100px top;}
+.homemain .inner .inner_tp .app{width: 100%;height: 264px;background: url(../img/index-img/ewmsm.png) no-repeat 258px 42px;}
+.homemain .inner .inner_tp .inner_md{width: 100%;height: 162px;background: url(../img/index-img/lucky.png) no-repeat 150px 14px;}
+.homemain .inner .scroll_txt{width: 100%;height: 122px;position: absolute;left: 337px;bottom: -42px;}
+.homemain .inner .scroll_txt>ul>li{float: left;margin: 0 16px;font-size: 12px;color:#3399cc;text-align: center;cursor: pointer;}
+.homemain .inner .scroll_txt>ul>li>span{display: inline-block;width: 74px;height: 8px;background-color:#2997b7 ;margin-bottom: 14px;}
+.homemain .inner .scroll_txt>ul>li>h1{font-size: 18px;color: #099;line-height: 44px;}
+
+/*赔付、承诺*/
+.homemain .sec-promise{width: 100%;height: 522px;position: relative;}
+.homemain .sec-promise .sp_c1{overflow: hidden;width: 100%;height: 302px;position: absolute;top: 80px;}
+.homemain .sec-promise .sp_c1 li{float: left;text-align: center;width: 33.33%;color: #333;}
+.homemain .sec-promise .sp_c1 li p{font-size: 22px;margin-top: 54px;}
+.homemain .sec-promise .btm{width: 1078px;height: 138px;border:1px solid #ccc;position: absolute;left: 50%;margin-left: -539px;top: 382px;text-align: center;background: url(../img/index-img/promissm.png) no-repeat 50% 22px;}
+
+/*网页运动部分*/
+
+.bdrep{width: 222px;height: 252px;position: fixed;right: 0;top: 80px;z-index: 999999;}
+.bdrep .bdr-head{width: 100%;height: 32px;background: #445fb0;position: relative;}
+.bdrep .bdr-head .bd-icon{display:inline-block;width: 70px;height: 20px;background: url(../img/index-img/creditPop.png) no-repeat;background-position: 0 -154px;margin: 6px 0px 0px 14px;}
+.bdrep .bdr-head>a{display: inline-block;color:#fff;font-size:14px;position: absolute;right: 14px;line-height: 32px;}
+.bdrep .bdr-md{width: 198px;height: 100px;padding: 8px 12px 0px 12px;background-color: #fff;border-bottom: 1px dashed #ccc;}
+.bdrep .bdr-md .bdr-company{width: 100%;height: 30px;line-height: 30px;overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color: #000;font-size: 14px;font-weight: 600;}
+.bdrep .bdr-md dl dt{width: 39px;height: 39px;background: url(../img/index-img/creditPop.png) no-repeat;background-position: -39px top;}
+.bdrep .bdr-md dl dt,dd{float: left;}

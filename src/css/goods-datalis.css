@@ -1,0 +1,159 @@
+
+/*大的div*/
+.goods-datails{width: 100%;height: auto;margin: 0 auto;}
+/*goods主要内容*/
+.goods-bg{width: 100%;height: auto;background: #f0fbfd;}
+.content{width: 1000px;height: auto;margin: 0 auto;}
+.content .content_nav{font-size: 12px;height: 40px;line-height: 40px;}
+.content_nav li{float: left;padding-left: 10px;padding-right: 10px;position: relative;}
+.content_nav li a{color: #000;}
+.content_nav li a:visited{color: #666;}
+.content_nav li .arrow{position: absolute;right:-8px ;}
+
+.content_main{padding-top: 20px;background: #fff;border: 1px solid #e2f5f8;overflow: hidden;}
+.content_left{width: 402px;padding-left: 20px;height:502px;float: left;overflow: hidden;}
+.content_main .datails_mask{margin: 16px 0 0;overflow: hidden;width: 344px;padding-left: 14px;position: relative;}
+.datails_mask .new-left{width: 14px;height: 22px;background: url(../img/goods-datails/mian.png) no-repeat -2px -20px;position: absolute;left: 0px;top: 23px;cursor: pointer;}
+.datails_mask .new-right{width: 14px;height: 22px;background: url(../img/goods-datails/mian.png) no-repeat -20px -20px;position: absolute;right: 0px;top: 23px;cursor: pointer;}
+.datalis_sm{width: 330px;overflow: hidden;height: 80px;position: relative;}
+.datalis_sm>ul{width: 510px;position: absolute;left: 0px;top: 0px;}
+.datails_mask li{float: left;height: auto;margin: 0 4px 0 0;overflow: hidden;padding: 0px;text-align: center;border:1px solid #cdcdcd}
+.datails_mask li .smpic{width: 75px;height: 75px;}
+.datalis_sm ul li a{height: 75px;width: 75px;overflow: hidden;display: block;}
+/*share*/
+.content-main-share{margin-left: 20px;margin-top: 10px;display: inline;float: left;}
+.jiathis_style{float: left;position: relative;}
+.jiathis_style .jiathis_txt{display: inline-block;position: absolute;top: 10px;}
+.jiathis_style .jiathis_txt:after{content: ',';display: block;overflow: hidden;overflow: visible;clear: both;}
+.content-main-share .jtico_qzone,.jtico_tsina,.jtico_tqq,.jtico_renren,.jtico_kaixin001{width:20px;height:20px;background:url(../img/icon.jpg) no-repeat left;display:inline-block;cursor: pointer;margin-top: 10px;}
+.jtico_tsina{background-position: -20px 0px;}
+.jtico_tqq{background-position: -40px 0;}
+.jtico_renren{background-position: -60px 0;}
+.jtico_kaixin001{background-position: -80px 0;}
+/*右边商品介绍*/
+.content-right{width: 576px;height:564px;float: left;}
+.content-right-title{width: 530px;height: 24px;background: url(../img/goods-datails/tob-bg.jpg) no-repeat;text-align: center;}
+.content-dp{height: 24px;line-height: 24px;margin: 0 auto;}
+.content-dp span{background: #fff;text-align: center; padding:0 10px;font-size: 14px;color: #000;}
+.content-main-dpp{width: 530px;line-height: 24px;font-size: 16px;font-family: 宋体;font-weight: 700;padding-top: 18px;padding-bottom: 20px;}
+/*价格*/
+.content-main-price{width: 100%;height: 37px;}
+.content-main-zk-1{font-size: 28px;color: #fd5908;font-weight: 800;float: left;}
+.content-main-zk-2{width: 40px;height: 28px;background: url(../img/goods-datails/mian.png) no-repeat -3px -55px;font-size: 12px;color: #fff;line-height: 28px;text-align: center;float: left;margin-left: 8px;margin-top:6px;display: inline;}
+.content-main-zk-3{float: left;font-size: 12px;color: #666;margin-top: 12px;margin-left: 20px;display: inline;}
+/*保障*/
+.content-main-pm{width: 530px;height: 45px;background: url(../img/goods-datails/mian.png) -39px 0px no-repeat;margin-top: 14px;position: relative;line-height: 45px;color: #000;}
+.sz{position: absolute;top: 8px;left: 20px;background: url(../img/goods-datails/mian.png) -3px -94px no-repeat;width: 36px;height: 30px;}
+.focus-time{font-size: 12px;margin-left: 64px;}
+/*型号*/
+.content-main-xh{font-size: 12px;margin-top: 30px;width: 440px;position: relative;border: 1px solid #fff;line-height: 14px;height: 26px;color: #000;}
+.content-main-xh-1{float: left;margin-top: 6px;margin-right: 20px;padding-bottom: 25px;display: inline;}
+.content-main-xh-2{float: left;width: 340px;}
+.content-main-xh-2 span{padding: 5px 10px;border:  1px solid #73dff4;;float: left;margin-right: 6px;display: inline;margin-bottom: 8px;cursor: pointer;position: relative;min-width: 40px;text-align: center;}
+.content-main-xh-2 span .zzz{position: absolute;bottom: 0px;right: 0px;width: 9px;height: 9px;background: url(../img/goods-datails/mian.png) -45px -57px no-repeat;}
+/*数量*/
+.content-main-sl{font-size: 12px;width: 100%;height: 26px;color: #000;position: relative;margin-top: 46px;}
+.content-main-sl-1{height: 26px;line-height: 26px;position: absolute;left: 0;top: 0;}
+.content-main-sl-2{float: left;margin-left: 20px;display: inline;position: absolute;left: 38px;top: 0;}
+.content-main-sl-2 span{width: 20px;height: 24px;text-align: center;line-height: 24px;font-size: 16px;display: inline-block;border: 1px solid #aeaeae;}
+.buynum{float: left;height: 24px;line-height: 24px;border: 1px solid #aeaeae;border-left: none;border-right: none;text-align: center;}
+/*sm*/
+.content-main-sm{font-size: 12px;height: 44px;line-height: 44px;margin-left: 70px;}
+/*addshop*/
+.content-main-addshop{float: left;width: 140px;display: inline;height: 54px;background: url(../img/goods-datails/mian.png) -860px -946px no-repeat;cursor: pointer;margin-top: 14px;}
+/*share*/
+.content-main-share2{width: 530px;height: 44px;line-height: 44px;font-size: 12px;font-family: "宋体";color: #999;float: left;}
+.content-main-share2 span{color: #5ca1e5;display: inline-block;}
+
+/*商品详细介绍*/
+.content-xp{width: 1000px;height: auto;margin: 0 auto;background: #fff;}
+.content-xp .content-xp-empty{width: 100%;height: 20px;background: #f0fbfd;}
+.content-xp-nav{height: 46px;line-height: 46px;border-top: 2px solid #71d9ed;background: #eaeaea;width: 1000px;z-index: 888;}
+.nav-active{position: fixed;top: 0;}
+.content-xp-nav ul{float: left;}
+.content-xp-nav ul li{float: left;font-size: 14px;width: 100px;text-align: center;}
+.content-xp ul li a{color: #000;font-family: "宋体,Arial";font-weight: 700;float: left;width: 100px;text-align: center;}
+.content-xp-nav ul li a.xuanz{background: #71d9ed;color: #fff;}
+.content-xp-nav ul li a.lia-active{background: #eaeaea;color: #000;}
+.content-xq-nav-right{float: right;margin-right: 10px;display: inline;}
+.content-xq-nav-right-1{font-size: 22px;color: #fd5908;font-weight: 800;float: left;width: 130px;text-align: right;}
+.content-xq-nav-right-1 span{font-size: 18px;}
+.content-xq-nav-right-1 i{font-style: normal;}
+/*商品内容*/
+/*商品介绍*/
+.content-xp-main{widows: ;dth: 1000px;height: auto;}
+.content-xp-intr{width: 100%;height: auto;padding-bottom: 70px;}
+.content-xp-intr:after{content: ',';clear: both;display: block;overflow: hidden; overflow:visible}
+.content-jies{height: 40px;line-height: 50px;font-size: 22px;width: 300px;padding-top: 10px;margin-left: 17px;}
+.content-jies-a{width: 274px;height: 38px;background: url(../img/goods-datails/mian.png) no-repeat -0px -304px;}
+.content-jies-2{border-top: 2px solid #c2c2c2;position: relative;}
+.cont-jies-a2{position: absolute;height: 2px;width: 274px;background: #666;overflow: hidden;left: 20px;top: -2px;}
+.cont-jies-main{padding: 20px 0 40px 0;}
+.cont-jies-a3{width: 120px;height: 112px;background: url(../img/goods-datails/mian.png) no-repeat -251px -55px;margin-left: 30px;margin-top: 25px;float: left;display: inline;}
+.cont-jies-txt{font-size: 12px;float: left;width: 754px;line-height: 16px;font-family: "宋体";margin-left: 45px;margin-top: 54px;display: inline;}
+/*商品参数*/
+.content-argum{width: 100%;height: auto;}
+.content-argum:after{content: ',';clear: both;display: block;overflow: hidden; overflow:visible}
+.cont-argum-1{height: 40px;line-height: 50px;font-size: 22px;width: 300px;padding-top: 10px;margin-left: 17px;}
+.cont-argum-1-a{width: 274px;height: 38px;background: url(../img/goods-datails/mian.png) -0px -340px no-repeat;}
+.cont-argum-main{border-top: 2px solid #c2c2c2;position: relative;}
+.cont-argumr-line{position: absolute;height: 2px;width: 274px;background: #666;overflow: hidden;left: 20px;top: -2px;}
+.cont-argumr-txt{width: 100%;height: auto;}
+.cont-main-left{width: 404px;height: auto;float: left;line-height: 24px;padding:40px 0px 170px 110px}
+.cont-main-left dl dt,dd{float: left;}
+.cont-main-left dl dt{width: 100px;color: #000;}
+.cont-main-left dl dd{width: 304px;}
+.cont-main-right{float: left;margin-top: 44px;width: 210px;height: 210px;overflow: hidden;padding-left: 130px;}
+/*商品详情*/
+.content-goods-datails{width: 100%;height: auto;}
+.cont-goods-pics{border-top: 2px solid #c2c2c2;position: relative;}
+.cont-showpic{width: 100%;height: auto;margin-top: 20px;padding-bottom: 40px;text-align: center;}
+/*商品介绍*/
+.content-goods-datails{width: 100%;height: auto;}
+.cont-brand-show{border-top: 2px solid #c2c2c2;position: relative;text-align: center;}
+/*使用方法*/
+.content-apply{width: 100%;height: auto;}
+.cont-apply-show{border-top: 2px solid #c2c2c2;position: relative;text-align: center;}
+/*品牌评论*/
+.content-remark{width: 100%;height: auto;}
+.cont-remark-show{border-top: 2px solid #c2c2c2;position: relative;text-align: center;}
+/*关于我们*/
+.content-about-us{width: 100%;height: auto;}
+.cont-about-show{border-top: 2px solid #c2c2c2;position: relative;text-align: center;}
+
+/*手机支付二维码弹出窗口*/
+.paywindow{background: #fff;position: fixed;left: 50%;top: 50%;width: 640px;height: 424px;margin-left: -320px;margin-top: -212px;z-index: 999999;font-family: "微软雅黑";font-weight: normal;border: 1px solid #f1f1f1;padding-bottom: 10px;}
+.closewindow{position: absolute;right: 10px;top: 10px;width: 18px;height: 18px;background: url(../img/goods-datails/close.png) left top no-repeat;cursor: pointer;}
+.paywindow h2{padding-left: 53px;line-height: 64px;padding-top: 8px;font-size: 20px;color: #696969;font-weight: normal;}
+.goods-pay{background: #f3f3f3;margin: 0 40px;height: 188px;}
+.goods-pay dt{padding: 12px 0px 12px 12px;float: left;}
+.goods-pay dd{float: left;width: 370px;padding-left: 10px;}
+.goods-pay dd h3{line-height: 42px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-weight: normal;}
+.goods-pay dd p span{color: #ff003c;border: 1px solid #ff003c;font-size: 12px;line-height: 22px;padding: 2px;border-radius: 2px;}
+.goods-pay .prisen{margin-top: 52px;height: 30px;line-height: 30px;color: #ff003c;font-size: 24px;font-family: "微软雅黑";}
+.goods-pay .priseo{line-height: 22px;font-size: 12px;color: #696969;}
+
+.appload{margin: 10px 24px 15px;border-top: 1px solid #f1f1f1;float: left;}
+.appload dt{float: left;padding: 15px 0 0 37px;}
+.appload dd{float: left;line-height: 130px;padding-top: 15px;padding-left: 42px;color: #696969;}
+
+/*蒙层*/
+#fullbg{position: fixed;top: 0;left: 0;background: gray;opacity: 0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;index:5;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul li{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;}
+body{font-family: "微软雅黑";color: #666;font-size: 12px;}
+/*---------清除默认样式---------*/
+/*login-main*/
+.login{width: 1000px;height: auto;margin: 0 auto;}
+.login-header{width: 100%;height: auto;padding: 40px 0 46px 0;position: relative;}
+.login-header .vimgb .logo{width: 262px;height: 75px;}
+.login-header .header-fr{width: 445px;height: 28px;background: url(../img/reg/loginmain.png) no-repeat;background-position: 0 -188px;position: absolute;right: 0;top: 80px;}
+/*login-infor*/
+.login-content{width: 1000px;height: 600px;}
+.login-content .login-banner{width:480px;height:353px;float: left;margin: 50px 0 0 50px;}
+.login-content .login-infor{width: 370px;height: 332px;float: left; margin-top: 30px;margin-left: 100px;}
+.login-infor .login-input,.login-input-hover{width: 263px;height: 33px;padding-left: 12px;border: 1px solid #bfbdbf;border-radius: 3px;font-size: 14px;color: #a6a6a6;}
+.login-infor .login-tit{margin-bottom: 20px;font-size: 14px;color: #000;}
+.login-infor .login-tit .fb{font-weight: bold;}
+.login-infor .login-usename{position: relative;}
+/*.login-infor .login-usename label{position: absolute;left: 12px;height: 35px;line-height: 35px;cursor: text;font-size: 14px;color: #a6a6a6;}*/
+.login-error{line-height: 3;color: #a6a6a6;}
+.login-infor .loginget-password{position: relative;}
+.login-infor .loginget-password label{position: absolute;left: 11px;height: 35px;line-height: 35px;cursor: text;font-size: 14px;color: #a6a6a6;}
+.login-infor .login-submit input{width: 140px;height: 40px;border-radius: 5px;color: #fff;font-size: 16px;font-weight: bold;background: url(../img/reg/loginmain.png) no-repeat -142px -1px;display: block;border: none;}
+.login-infor .login-submit input:hover{background-position: -142px -41px;}
+.login-infor .mt15{margin-top: 15px;}
+.login-infor #member{position: relative;top: 2px;}
+.login-infor .link-for-login{width: 280px;margin-top: 30px;line-height: 2;border-top: 1px dashed #ccc;}
+.login-infor .link-for-login a{width: 24px;height: 24px;margin-right: 5px;display: inline-block;margin-top: 7px;}
+.login-infor .link-for-login .icon-weibo{background: url(../img/reg/loginmain.png) no-repeat -142px -122px;}
+.login-infor .link-for-login .icon-qq{background: url(../img/reg/loginmain.png) no-repeat -166px -122px;}
+.login-infor .link-for-login .icon-weixin{background: url(../img/reg/loginmain.png) no-repeat -214px -122px;}
+.login-infor .link-for-login .icon-weibo:hover{background-position: -142px -146px;}
+.login-infor .link-for-login .icon-qq:hover{background-position: -166px -146px;}
+.login-infor .link-for-login .icon-weixin:hover{background-position: -214px -146px;}
+/*验证码*/
+.login-identifying{position: relative;margin-bottom: 20px;}
+.login-identifying #verifyimage{position: absolute;top: 2px;cursor: pointer;display:inline-block;width: 70px;height: 30px;border: 1px solid #aeaeae;}
+.login-identifying #huanyizhang{margin-left: 76px;color: #ff9710;}
+/*#yantishi{width: 100%;height: 14px;color: #f20266;line-height: 14px;display: none;}*/
+/*login-footer*/
+.login-footer{width: 100%;height: auto;}
+.login-footer .footer-about{width: 500px;margin-left: 116px;}
+.login-footer .footer-about a{color: #666;font-size: 14px;line-height: 36px;}
+.login-footer .footer-about span{margin: 0 13px;display: inline-block;}
+.login-footer .footer-right{margin-left: 170px;} 

@@ -1,0 +1,74 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul li{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;vertical-align:top;}
+body{font-family: "微软雅黑";color: #666;font-size: 12px;}
+/*---------清除默认样式---------*/
+/*commonhead头部logo等*/
+.commonhead{width: 100%;height: 110px;position: relative;}
+.commonhead .headmian{width: 1080px;height: 110px;position: absolute;left: 50%;margin-left: -540px;}
+.commonhead .headmian .shortcut{width: 462px;height: 32px;line-height: 32px;float: right;}
+.commonhead .headmian .shortcut>dl{float: left;}
+.commonhead .headmian .shortcut .s1 dt,dd{float: left;}
+.commonhead .headmian .shortcut .s1 dd{margin-left: 4px;}
+.commonhead .headmian .shortcut .s1 dd a{color: #ff0099;}
+.commonhead .headmian .shortcut .s1 dd>span{display: inline-block;margin: 0 15px;}
+.commonhead .headmian .shortcut .tel dt{width: 17px;height: 19px;background: url(../img/index-img/phone.png) no-repeat center center;margin-right: 8px;margin-top: 10px;}
+.commonhead .headmian .shortcut .tel{margin-left: 30px;}
+.commonhead .headmian .shortcut .tel dt,dd{float: left;}
+.commonhead .headmian .logo_nav{width: 472px;height: 76px;margin-top: 32px;}
+.commonhead .headmian .logo_nav>h1>a>img{width: 130px;height: 48px;}
+.commonhead .headmian .logo_nav .nav{margin: 26px 0px 0 40px;}
+.commonhead .headmian .logo_nav h1,.nav{float: left;}
+.commonhead .headmian .logo_nav .nav>span{display: inline-block;margin: 0 15px;color: #e2eefa;}
+.commonhead .headmian .logo_nav .nav a{color: #666;font-size: 14px;}
+.commonhead .headmian .logo_nav .nav a:hover{color: #f00;}
+.commonhead .headmian .logo_nav,.search_nav{float: left;}
+.commonhead .headmian .search_nav{width: 536px;height: 76px;margin-left: 72px;}
+.commonhead .headmian #search{width: 430px;height: 30px;border: 2px solid #f00;float: left;}
+.commonhead .headmian #btn{width: 100px;height: 34px;border: 2px solid #f00;background-color:#f00 ;float: left;font-size:18px ;color: #fff;text-align: center;cursor: pointer;}
+.commonhead .headmian .search_nav,.sn_nav{float: left;line-height: 32px;}
+.commonhead .headmian .sn_nav{width: 324px;margin-left: 8px;}
+.commonhead .headmian .sn_nav a{color: #666;font-size: 14px;}
+.commonhead .headmian .sn_nav a:link{color: #666;}
+.commonhead .headmian .sn_nav a:visited{color: #d3b80f;}
+.commonhead .headmian .sn_nav a:hover{color: #f00;}
+.commonhead .headmian .sn_nav a:active{color: #f00;}
+.commonhead .headmian .sn_nav>span{display: inline-block;margin: 0px 14px 0px 10px;color: #e2eefa;}
+.commonhead .headmian form{float: right;}
+
+/*topshow装饰条*/
+.topshow{width: 100%;height: 6px;overflow: hidden;position: relative;}
+.topshow img{width: 1920px;height: 6px;position: absolute;top: 0;left: 50%;margin-left: -960px;}
+/*-------------首页底部部分 公共的部分---------*/
+/*homefooter 尾部部分*/
+.homefooter{width: 100%;height: 358px;position: relative;background: url(../img/index-img/btmbg.png) repeat-x;margin-top: 40px;}
+.homefooter .footertop{width: 1080px;height: 184px;border-bottom:1px solid #ccc ;position: absolute;left: 50%;margin-left: -540px;margin-top: 10px;}
+.homefooter .footertop .ft_dl{width: 1044px;height: 152px;margin-left: 36px;margin-top:32px;position: relative;}
+.homefooter .footertop .ft_dl>dl{width: 107px;height: auto;float: left;font-size: 12px;margin-right: 24px;}
+.homefooter .footertop .ft_dl>dl dt{font-weight: 600;margin-bottom: 6px;cursor: text;}
+.homefooter .footertop .ft_dl>dl a{color: #666;line-height: 24px;}
+.homefooter .footertop .ft_dl dd{width: 100%;height: 24px;}
+.homefooter .footertop .ft_dl .showline{display: inline-block;width: 1px;height: 112px;background-color: #ccc;position: absolute;left: 636px;top: 8px;}
+.homefooter .footertop .ft_dl .ft_right{width: 296px;height: 152px;position: absolute;left: 688px;}
+.homefooter .footertop .ft_dl .ft_right>dl{width:148px;float: left;color: #333;line-height: 24px;font-size: 14px;}
+.homefooter .footertop:after{content: '.';clear: both;display: block;height: 0;overflow: hidden;visibility: hidden;}
+.homefooter .footerbtm{width: 100%;height: 164px;position: absolute;bottom: 0;}
+.homefooter .footerbtm .msglink{height:32px;line-height: 32px;margin-top: 12px;position: absolute;left: 50%;margin-left: -342px;}
+.homefooter .footerbtm .msglink a{margin: 0 24px;color: #666;}
+.homefooter .footerbtm .hoslink{width:510px;height: 24px;position: absolute;top: 44px;left: 50%;margin-left: -235px;position: relative;}
+.homefooter .footerbtm #link{width: 510px;height:24px;position: absolute;left: 0;top: 0;}
+.homefooter .footerbtm #link li{float: left;margin:0 9px;line-height: 24px;}
+.homefooter .footerbtm #link li a{color: #666;line-height: 24px;}
+.homefooter .footerbtm #txt{position: absolute;top: 47px;left: 340px;}
+.homefooter .footerbtm .msg{width:670px;height: auto;position: absolute;top: 70px;left: 50%;margin-left: -335px;}
+.homefooter .footerbtm .tel{position: absolute;top: 98px;width:416px;color: #333;font-size: 14px;left: 50%;margin-left: -208px;}
+.homefooter .footerbtm .tel>span{display: inline-block;width: 21px;height: 14px;background: url(../img/index-img/phone.jpg) no-repeat;margin-right: 88px;}
+.homefooter .footerbtm>ul{position: absolute;bottom: 0;left: 50%;margin-left: -118px;}
+.homefooter .footerbtm>ul>li{float: left;margin-right: 10px;cursor: pointer;}
+
+/*网页运动部分*/
+.ablet{width: 100px;height: 353px;position: fixed;right: 10px;bottom: 270px;z-index: 99999;line-height: 0;display: block;}

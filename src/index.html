@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>亲亲宝贝商城-您身边的母婴商城，怀孕与育儿专业产品网站-奶粉、纸尿裤、辅食、玩具、婴儿床、推车、新生儿礼盒、全场包邮-亲亲宝贝商城qinqinbaby.com</title>
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/xcarousel/jquery.xcarousel.css"/>
+        
+	<script src="js/jquery-1.12.0.js"></script>
+	<script src="assets/jquery.scrolltxt.js"></script>
+	<script src="assets/xcarousel/jquery.xcarousel.js"></script>
+	<script>
+		jQuery(function($){
+			//文字轮播
+			$("#link").imgscroll({
+				speed: 40,
+				amount: 0,
+				width: 1,
+				dir: "left"
+			});
+			//图片轮播；
+			$(".homemain").find(".phone_inner").xcarousel({
+				width:236,
+				height:421,
+				page:true,//是否显示页码
+				autoPlay:true,//是否自动轮播
+				type:'x',//动画类型：水平滚动x, 垂直滚动y, 渐现效果fade
+				buttons:false,//是否显示前后按钮
+				speed:1500,//轮播图速度
+			})
+			//显示隐藏小广告
+			$(document).scroll(function(){
+				var $scrollTop = $(window).scrollTop();
+				if($scrollTop == 0){
+					$(".ablet").fadeOut("slow");
+				}else if($scrollTop > 0){
+					$(".ablet").fadeIn("slow");
+				}
+			});
+				//回到顶部；
+			$("#goBack").on("click",function(){
+				$(document).scrollTop("0");
+			})
+		})
+	</script>
+	</head>
+	<body style="overflow-x: hidden;">
+		<div id="index-main">
+			<!--共同的头部页面-->
+			<div class="commonhead">
+				<!--头部 内容-->
+				<div class="headmian">
+					<!-- 头部内容快速登录、注册   -->
+					<div class="shortcut">
+						<dl class="s1">
+							<dt>你好，欢迎来到亲亲宝贝！请</dt>
+							<dd>
+								 <a href="" id="user">登录</a><span>|</span><a href="">免费注册</a>
+							</dd>
+						</dl>
+						<dl  class="tel">
+							<dt></dt>
+							<dd>客服电话：400-610-9993</dd>
+						</dl>
+					</div>
+					<!-- 网站logo、导航菜单-->
+					<div class="logo_nav">
+					<h1><a href="http://www.qinqinbaby.com/"><img src="img/index-img/logo265-75-d.gif" alt="" title="亲亲宝贝"/></a></h1>
+					<div class="nav">
+					<a href="http://www.qinqinbaby.com/home/index/app"  style="color: #f00;margin-left: 4px;">首页</a><span>|</span>
+					<a href="http://www.qinqinbaby.com/home/index/cooperate">手商云</a><span>|</span>
+					<a href="http://www.qinqinbaby.com/home/index/promise">关于我们</a><span>|</span>
+					<a href="http://www.qinqinbaby.com/home/index/investment">商家入驻</a>
+					</div>
+					</div>
+					<!-- search -->
+					<div class="search_nav">
+						<form action="">
+							<input type="text" name="search" id="search" value="" />
+							<input type="submit" name="btn" id="btn" value="搜索" />
+						</form>
+						<div class="sn_nav">
+							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%AE%9D%E5%AE%9D%E7%8E%A9%E5%85%B7" style="color: #f00;">宝宝玩具</a><span>|</span>
+							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%A5%B6%E7%B2%89">奶粉</a><span>|</span>
+							<a href="http://www.qinqinbaby.com/home/search/index/content/%E8%BE%85%E9%A3%9F%E8%90%A5%E5%85%BB">辅助营养</a><span>|</span>
+							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%B0%BF%E8%A3%A4">尿裤</a><span>|</span>
+							<a href="http://www.qinqinbaby.com/home/search/index/content/%E6%B9%BF%E5%B7%BE">湿巾</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--装饰条-->
+			<div class="topshow">
+				<img src="img/index-img/linehead.jpg"/>
+			</div>
+			<!--主要页面-->
+			<div class="homemain">
+				<!--主区-->
+				<div class="sec-main">
+					<!--sec-main inner-->
+					<div class="inner">
+						<div class="phone">
+							<div class="phone_inner">
+								<ul>
+									<li><img src="img/index-img/slide1.jpg" alt="" /></li>
+									<li><img src="img/index-img/slide2.jpg" alt="" /></li>
+									<li><img src="img/index-img/slide3.jpg" alt="" /></li>
+									<li><img src="img/index-img/slide4.jpg" alt="" /></li>
+									<li><img src="img/index-img/slide5.jpg" alt="" /></li>
+									<li><img src="img/index-img/slide6.jpg" alt="" /></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner_tp">
+							<div class="inner_txt"></div>
+							<div class="app"></div>
+							<div class="inner_md"></div>
+						</div>
+						<div class="scroll_txt">
+							<ul>
+								<li>
+									<span></span>
+									<h1>商城首页</h1>
+									<p>App</p>
+								</li>
+								<li>
+									<span></span>
+									<h1>我家附近</h1>
+									<p>啥都有</p>
+								</li>
+								<li>
+									<span></span>
+									<h1>每周大牌</h1>
+									<p>品牌旗舰</p>
+								</li>
+								<li>
+									<span></span>
+									<h1>拿去花</h1>
+									<p>百万红包等你拿</p>
+								</li>
+								<li>
+									<span></span>
+									<h1>百科</h1>
+									<p>生活育儿</p>
+								</li>
+								<li>
+									<span></span>
+									<h1>海淘</h1>
+									<p>购全球</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--赔付、承诺-->
+				<div class="sec-promise">
+					<ul class="sp_c1">
+						<li class="f1">
+							<a href="http://www.qinqinbaby.com/home/index/promise#maopeifu" target="_blank"><img src="img/index-img/promis1sm.png" alt="" width="160"></a>
+							<p>超时赔付</p>
+						</li>
+						<li class="f1">
+							<a href="http://www.qinqinbaby.com/home/index/promise#maotuikuan" target="_blank"><img src="img/index-img/promis2sm.png" alt="" width="160"></a>
+							<p>闪电退款</p>
+						</li>
+						<li class="f1">
+							<a href="http://www.qinqinbaby.com/home/index/promise#maobaozheng" target="_blank"><img src="img/index-img/promis3sm.png" alt="" width="160"></a>
+							<p>正品保证</p>
+						</li>
+					</ul>
+					<div class="btm"></div>
+				</div>
+			</div>
+			<!--页面尾部-->
+			<div class="homefooter">
+				<div class="footertop">
+					<div class="ft_dl">
+						<dl>
+							<dt>新手入门</dt>
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/gwzn.html" target="_blank">购物指南</a>
+							</dd>
+							
+							<dd>
+								<a href="<a href="http://www.qinqinbaby.com/home/footer/fwxy.html" target="_blank">服务协议</a>
+							</dd>
+							
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/hyjs.html" target="_blank">会员介绍</a>
+							</dd>
+							
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/lxkf.html" target="_blank">联系客服</a>
+							</dd>
+						</dl>
+						<dl>
+                    <dt>售后服务</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/thsm.html" target="_blank">退款说明</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/thzc.html" target="_blank">退货政策</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/hhzc.html" target="_blank">换货政策</a></dd>
+                    <dd><a href="question" target="_blank">顾客意见</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>支付方式</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/hdfk.html" target="_blank">货到付款</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/zxzf.html" target="_blank">在线支付</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/yhj.html" target="_blank">优惠券使用</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>配送服务</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/pszc.html" target="_blank">配送政策</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psfw.html" target="_blank">配送范围</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psfwcx.html" target="_blank">配送服务查询</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psyf.html" target="_blank">配送运费</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>常见问题</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/gwxz.html" target="_blank">购物须知</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/spysyqs.html" target="_blank">商品验货与签收</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/dzspgm.html" target="_blank">大宗商品购买</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/mmzh.html" target="_blank">找回密码</a></dd>
+                    </dl>
+                    <span class="showline"></span>
+                    <div class="ft_right">
+                    	<dl>
+                    		<dt><a href="#"><img src="img/index-img/twocode.jpg" alt="" title="亲亲宝贝微信二维码"/></a></dt>
+                    		<dd>亲亲宝贝官方微博</dd>
+                    	</dl>
+                    	<dl>
+                    		<dt><a href="https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http%3A%2F%2Fweibo.com%2Fqinqinbaby2003&domain=.weibo.com&sudaref=http%3A%2F%2Fwww.qinqinbaby.com%2F&ua=php-sso_sdk_client-0.6.23&_rand=1475130003.9952"><img src="img/index-img/xl.jpg"/></a></dt>
+                    		<dd>亲亲宝贝新浪微博</dd>
+                    	</dl>
+                    </div>
+					</div>
+				</div>
+				<div class="footerbtm">
+					<div class="msglink">
+						<a href="http://www.qinqinbaby.com/home/index/promise" target="_blank">关于我们</a><span>|</span>
+						<a href="javascript:;" taget="_blank">爱计划公益活动</a><span>|</span>
+						<a href="http://www.cnkids.org/" taget="_blank">中国儿童服装周</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/lxkf" target="_blank">联系我们</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/job" target="_blank">招贤纳士</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/zhaoshang" target="_blank">商家入驻</a>
+					</div>
+					<p id="txt">热情链接：</p>
+					<div class="hoslink">
+						
+							<ul id="link">
+								<li><a href="http://zs.fang.com" target="_blank">房天下</a></li>
+								<li><a href="http://www.azb22.com" target="_blank">化妆品代理</a></li>
+								<li><a href="http://www.vipcn.com/" target="_blank">清风手游网</a></li>
+								<li><a href="http://www.bianwanjia.com/" target="_blank">便玩家</a></li>
+								<li><a href="http://www.yqdown.com/" target="_blank">友情手机站</a></li>
+								<li><a href="http://www.9553.com/" target="_blank">9553下载</a></li>
+								<li><a href="http://www.cr173.com/" target="_blank">西西软件园</a></li>
+								<li><a href="http://www.97sky.cn/" target="_blank">就去天空</a></li>
+								<li><a href="http://game.91.com/" target="_blank">91游戏网</a></li>
+								<li><a href="http://www.xpgod.com/" target="_blank">系统天堂</a></li>
+								<li><a href="http://mydown.yesky.com/" target="_blank">天极下载</a></li>
+							</ul>
+					</div>
+					<div class="msg">©&nbsp;&nbsp;亲亲宝贝网2003-2014 qinqinbaby.com All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公安网备11010802015478号 京ICP备11017831号</div>
+					<div class="tel" style="width:450px;text-align:center;"><span></span>客服热线：400-610-9993 周一~周日 9:00~21:00</div>
+					<ul>
+						<li><img src="img/index-img/lice1.jpg" alt="" /></li>
+						<li><img src="img/index-img/lice3.jpg" alt="" /></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+
+		<!--联系客服、邮箱-->
+		
+		<div class="ablet">
+			<!--头部-->
+			<img src="img/index-img/fix01.png" alt="">
+			<!--邮箱-->
+			<a href="Mailto:kefu@qinqinbaby.com" title="kefu@qinqinbaby.com"><img src="img/index-img/fix02.png" alt="" title=""/></a>
+			<!--联系客服-->
+			<a href="#"></a><img src="img/index-img/fix03.png"/></a>
+			<!--微信服务号-->
+			<img src="img/index-img/fix04.png" alt=""/>
+			<!--回到顶部-->
+			<img src="img/index-img/fix05.png" alt="" style="cursor: pointer;" id="goBack"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul li{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;}
+body{font-family: "微软雅黑";color: #666;font-size: 12px;}
+/*---------清除默认样式---------*/
+/*login-main*/
+.login-main{width: 1000px;height: auto;margin: 0 auto;}
+/*login-header*/
+.login-header{width: 100%;height: auto;padding: 40px 0 46px 0;position: relative;}
+.login-header .vimgb .logo{width: 262px;height: 75px;}
+.login-header .header-fr{width: 445px;height: 28px;background: url(../img/reg/loginmain.png) no-repeat;background-position: 0 -188px;position: absolute;right: 0;top: 80px;}
+/*login-infor*/
+.login-infor{width: 100%;height: auto;}
+.login-infor:after{content: ',';overflow: hidden;display: block;overflow: visible;clear: both;}
+.login-infor .login-banner{width: 480px;height: 355px;margin: 50px 0 0 50px;float: left;}
+.login-form{width: 370px;height: 472px;float: right;}
+.login-form .f14{font-size: 14px;font-family: 'yahei',Verdana,Arial,Helvetica,sans-serif;margin-bottom: 20px;}
+.login-form input{width: 263px;height: 33px;border: 1px solid #bfbdbf;border-radius:3px ;font-size: 14px;color:#a6a6a6;padding-left:12px ;font-size: 14px;}
+.login-form .login-sex{font-size: 14px;color: #000;}
+.login-form .login-sex input{width: 13px;height: 13px;cursor: pointer;}
+.login-form #pcode,#vcode{width: 130px;}
+.login-form #yantishi{width: 100%;height: 14px;color: #f20266;line-height: 14px;display: none;}
+.login-form .loginimg{position: relative;}
+.login-form #verifyimage{position: absolute;top: 2px;cursor: pointer;display:inline-block;width: 70px;height: 30px;border: 1px solid #aeaeae;}
+.login-form #huanyizhang{margin-left: 76px;color: #ff9710;}
+.login-form .send_code{width:120px; height: 30px;border: 1px solid #ffbd89;background: #fff5ed;font-size: 12px;color: #000;margin-bottom: 30px;}
+.login-form .login-sprite-btn{width: 140px;height: 40px;background: url(../img/reg/loginmain.png) no-repeat -142px -1px;padding-left: 0;color: #fff;font-size: 16px;font-weight: bold;border-radius: 5px;}
+.login-form .login-sprite-btn:hover{background: url(../img/reg/loginmain.png) no-repeat -142px -41px;}
+.login-form .register-read{margin-top: 18px;display: block;}
+.login-form .checkbox-active{width: 14px;height: 14px;display: inline-block;position: relative;left: 2px;top: 2px;}
+.login-form .login-error{color: #f20266;height: 25px;line-height: 24px;}
+
+/*login-footer*/
+.login-footer{width: 100%;height: auto;}
+.login-footer .footer-about{width: 500px;margin-left: 116px;}
+.login-footer .footer-about a{color: #666;font-size: 14px;line-height: 36px;}
+.login-footer .footer-about span{margin: 0 13px;display: inline-block;}
+.login-footer .footer-right{margin-left: 170px;} 
