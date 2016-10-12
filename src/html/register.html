@@ -14,14 +14,15 @@
 					var $psw = $("#pass3").val();
 					var $pswAg = $("#pass4").val();
 					//设置cookie
-					$.cookie("userName",$usePhone,{expries:7});
-					$.cookie("psw",$psw,{expries:7});
-					$.cookie("pswAg",$pswAg,{expries:7});
+					var oList = [];
+						oList.push({user:$usePhone,psw:$psw});
+					var userPass = JSON.stringify(oList);
+					$.cookie("userpass",userPass,{expries:7},{path:"/"});
 				});
 			});
 		</script>
 	</head>
-	<body style="overflow-x: hidden;">
+	<body style="overflow-x: scroll;">
 		<div class="login-main">
 			<!--login注册页头部-->
 			<div class="login-header">

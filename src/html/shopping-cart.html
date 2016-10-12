@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/shopping-cart.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<script src="../js/jquery-1.12.0.js"></script>
+		<script src="../assets/jquery.scrolltxt.js"></script>
+		<script src="../js/shopping-cart.js"></script>
+		<script src="../assets/xcarousel/jquery.xcarousel.js"></script>
+		<script src="../assets/jquery.cookie.js"></script>
+		<script>
+			jQuery(function(){
+				$("#link").imgscroll({
+				speed: 40,
+				amount: 0,
+				width: 1,
+				dir: "left"
+			});
+			})
+			onload = function(){
+				var timer = null;
+				var speed = 148;
+				var hisBtn = document.getElementsByClassName("goods-history-list")[0];
+				var aLi = hisBtn.getElementsByTagName("li");
+				var preBtn = document.getElementsByClassName("pre-btn")[0];
+				var nextBtn = document.getElementsByClassName("next-btn")[0];
+				hisBtn.innerHTML = hisBtn.innerHTML + hisBtn.innerHTML;
+				hisBtn.style.width = aLi[0].offsetWidth*aLi.length+"px";
+//				timer = setInterval(move,300);
+				function move(){
+					if(hisBtn.offsetLeft<-hisBtn.offsetWidth/2){
+						hisBtn.style.left = '0';
+					}
+					if(hisBtn.offsetLeft>0){
+						hisBtn.offsetLeft = -hisBtn.offsetWidth/2 + "px";
+					}
+					hisBtn.style.left = hisBtn.offsetLeft + speed + "px";
+				}
+				
+				preBtn.onclick = function(){
+					speed = -148;
+					move();
+				}
+				nextBtn.onclick = function(){
+					speed = 148;
+					move();
+				}
+			}
+		</script>
+	</head>
+	<body style="overflow-x: scroll;">
+		<div class="shopping-cart">
+			<!--header-->
+			<div class="shopping-header">
+				<!--user-infor-->
+				<div class="shopping-user-infor">
+					<div class="user">
+					<div class="userName">
+						<p>您好！ <i>Your name is</i>!<b>[退出]</b></p>
+					</div>
+					<!--我的订单-->
+					<div class="shopping-myindent">
+						<a href="#">我的定单</a><span>|</span>
+						<a href="#">会员中心</a><span>|</span>
+						<a href="#">购物车</a><span>|</span>
+						<a href="#">关注</a>
+					</div>
+					</div>
+				</div>
+				<!--logo-->
+				<div class="shopping-logo">
+					<div class="logo">
+					<!--left-->
+					<div class="shopping-logo-img">
+						<a href="/projecj/sec/index"><img src="../img/shopping-cart-img/logo265-75-d.gif" alt="" title="亲亲宝贝"/></a>
+					</div>
+					<!--right-->
+					<div class="shopping-right">
+						<img src="../img/shopping-cart-img/购物车_提交步骤.png" style="cursor: pointer;"/>
+					</div>
+					</div>
+				</div>
+				<!--shopping-pro-->
+				<div class="shopping-pro">
+					<div class="shopping-mycart">
+					<dl>
+						<dt></dt>
+						<dd><a href="#">我的购物车</a></dd>
+					</dl>
+					<div class="pro-img">
+						<img src="../img/shopping-cart-img/购物车_07.png" style="vertical-align: middle;"/>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!--middle-->
+			<div class="shopping-middle">
+				<div class="shopping-middle-box">
+					<!--购物商品-->
+					<div class="shopping-goods">
+						<div class="shopping-goods-title">
+							<p class="shopping-checkall">
+								<input type="checkbox" name="" id="checkall" value="" style="margin-top: 2px;"/>
+								全选
+								<a href="#" id="delall">删除</a>
+							</p>
+							<div class="shopping-list">
+								<span>单价（元）</span>
+								<span>数量</span>
+								<span>小计</span>
+								<span>操作</span>
+							</div>
+						</div>
+						<div class="shopping-goods-datails">
+							<p class="company-infor">
+								<input type="checkbox" name="" value="" checked="checked"/>
+								北京市亲亲宝贝管理科技有限公司
+							</p>
+							<!--采购的商品详情-->
+							<div class="shopping-goods-news" style="overflow-y: scroll;">
+								<ul class="goods-li">
+									<!--选中删除-->
+									<li class="goods-checked">
+										<!--<input type="checkbox" name="" id="" value="" class="checkdel"/>-->
+									</li>
+									<li class="goods-pic">
+										<a href="../html/list-page.html"></a>
+									</li>
+									<li class="goods-txt">
+										<p class="goods-txt1" id="txt2"><!--荷兰Hero Baby美素奶粉1段（0-6个月宝宝）800g【2盒】--></p>
+										<p class="goods-type"><!--型号：8080--></p>
+									</li>
+									<li class="goods-price">
+										<span class="nowprice"><!--￥175.00--></span>
+										<del><!--￥600--></del>
+									</li>
+									<li>
+										<!--<div class="content-main-sl">
+					                    	<div class="content-main-sl-2">
+					                    		<span style="float: left;display: inline;cursor: pointer;background: #e3e3e3;" class="low hya">-</span>
+					                    		<input size="3" class="buynum" value="1" type="text">
+					                    		<span style="background: #fff;cursor: pointer;" class="up">+</span>
+					                    	</div>
+					                   		</div>-->
+									</li>
+									<li class="price">
+										<!--￥175.00-->
+									</li>
+									<li class="lastLi">
+										<!--<a href="#" class="del-goods">删除</a>-->
+									</li>
+								</ul>
+							</div>
+							<!--商品总价-->
+							<div class="shopping-goods-price">
+								<div class="price-box">
+								<p class="freight"><span>运费：￥</span><span class="fr-price">8.00</span>元</p>
+								<p class="goods-money"><span>商品金额：￥</span><span class="goods-pr"><!--175.00--></span>元</p>
+								<p class="total-money"><span>小计：￥</span><span class="sum-pr"><!--183.00--></span>元</p>
+							</div>
+						</div>
+					</div>
+					<!--商品优惠价格-->
+					<div class="fav-price">
+						<div class="youhuijuan">
+							<button></button>
+							<p class="youhuitxt" style="color: #3790db;display: inline;">优惠券使用说明</p>
+							<p class="huiyuan">【提示：如果你商品有海淘商品，	请到会员中心实名认证！】</p>
+						</div>
+						<div class="goods-youhui">
+							<dl>
+								<dt>商品金额：</dt>
+								<dd class="goods-price-money"><!--￥175.00--></dd>
+							</dl>
+							<dl>
+								<dt>满减优惠</dt>
+								<dd>￥0.00</dd>
+							</dl>
+							<dl>
+								<dt>优惠券</dt>
+								<dd>￥0.00</dd>
+							</dl>
+							<dl>
+								<dt>运费</dt>
+								<dd>￥8.00</dd>
+							</dl>
+						</div>
+					</div>
+					<!--总价格-->
+					<div class="goods-sum">
+						<a href="#" class="cont-buy">继续购买>></a>
+						<div class="lijiman">
+							<p class="p1">应付金额：<i class="lijiman-money"><!--￥175.00--></i></p>
+							<div class="liji-btn">
+								<input type="button"  value="" />
+						</div>
+					</div>
+				</div>
+				<!--kong-->
+				<div class="goods-empty"></div>
+				<!--history-->
+				<div class="look-history">
+					<span class="pre-btn"></span>
+					<div class="goods-history">
+						<ul class="goods-history-list" style="position: absolute;left: 0;top: 0;">
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/147270228549460_225x225.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/1-5.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/1-1.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/1-2.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/1-3.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="#"><img src="../img/shopping-cart-img/1-4.jpg" alt=""/></a></dt>
+									<dd>
+										<p class="p2">YB/御宝 羊奶粉2段婴幼儿配方180g小厅6-12个月 厂家直销 品质保证（限购2厅）</p>
+										<i class="history-goods-pr">￥189.00</i>
+										<input type="button" name="" id="" value="" class="histoyr-btn"/>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<span class="next-btn"></span>
+				</div>
+			</div>
+			</div>
+			</div>
+			<!--footer-->
+			<div class="homefooter" style="top: 350px;">
+				<div class="footertop">
+					<div class="ft_dl">
+						<dl>
+							<dt>新手入门</dt>
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/gwzn.html" target="_blank">购物指南</a>
+							</dd>
+							
+							<dd>
+								<a href="&lt;a href=" http:="" www.qinqinbaby.com="" home="" footer="" fwxy.html"="" target="_blank">服务协议</a>
+							</dd>
+							
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/hyjs.html" target="_blank">会员介绍</a>
+							</dd>
+							
+							<dd>
+								<a href="http://www.qinqinbaby.com/home/footer/lxkf.html" target="_blank">联系客服</a>
+							</dd>
+						</dl>
+						<dl>
+                    <dt>售后服务</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/thsm.html" target="_blank">退款说明</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/thzc.html" target="_blank">退货政策</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/hhzc.html" target="_blank">换货政策</a></dd>
+                    <dd><a href="question" target="_blank">顾客意见</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>支付方式</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/hdfk.html" target="_blank">货到付款</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/zxzf.html" target="_blank">在线支付</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/yhj.html" target="_blank">优惠券使用</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>配送服务</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/pszc.html" target="_blank">配送政策</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psfw.html" target="_blank">配送范围</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psfwcx.html" target="_blank">配送服务查询</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/psyf.html" target="_blank">配送运费</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>常见问题</dt>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/gwxz.html" target="_blank">购物须知</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/spysyqs.html" target="_blank">商品验货与签收</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/dzspgm.html" target="_blank">大宗商品购买</a></dd>
+                    <dd><a href="http://www.qinqinbaby.com/home/footer/mmzh.html" target="_blank">找回密码</a></dd>
+                    </dl>
+                    <span class="showline"></span>
+                    <div class="ft_right">
+                    	<dl>
+                    		<dt><a href="#"><img src="../img/index-img/twocode.jpg" alt="" title="亲亲宝贝微信二维码"></a></dt>
+                    		<dd>亲亲宝贝官方微博</dd>
+                    	</dl>
+                    	<dl>
+                    		<dt><a href="https://passport.weibo.com/visitor/visitor?entry=miniblog&amp;a=enter&amp;url=http%3A%2F%2Fweibo.com%2Fqinqinbaby2003&amp;domain=.weibo.com&amp;sudaref=http%3A%2F%2Fwww.qinqinbaby.com%2F&amp;ua=php-sso_sdk_client-0.6.23&amp;_rand=1475130003.9952"><img src="../img/index-img/xl.jpg"></a></dt>
+                    		<dd>亲亲宝贝新浪微博</dd>
+                    	</dl>
+                    </div>
+					</div>
+				</div>
+				<div class="footerbtm">
+					<div class="msglink">
+						<a href="http://www.qinqinbaby.com/home/index/promise" target="_blank">关于我们</a><span>|</span>
+						<a href="javascript:;" taget="_blank">爱计划公益活动</a><span>|</span>
+						<a href="http://www.cnkids.org/" taget="_blank">中国儿童服装周</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/lxkf" target="_blank">联系我们</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/job" target="_blank">招贤纳士</a><span>|</span>
+						<a href="http://www.qinqinbaby.com/home/footer/zhaoshang" target="_blank">商家入驻</a>
+					</div>
+					<p id="txt">热情链接：</p>
+					<div class="hoslink" style="overflow: hidden; position: relative;">
+						
+							<ul id="link" style="width: 2268px; left: -257px;"><li style="float: left;"><a href="http://zs.fang.com" target="_blank">房天下</a></li><li style="float: left;"><a href="http://www.azb22.com" target="_blank">化妆品代理</a></li><li style="float: left;"><a href="http://www.vipcn.com/" target="_blank">清风手游网</a></li><li style="float: left;"><a href="http://www.bianwanjia.com/" target="_blank">便玩家</a></li><li style="float: left;"><a href="http://www.yqdown.com/" target="_blank">友情手机站</a></li><li style="float: left;"><a href="http://www.9553.com/" target="_blank">9553下载</a></li><li style="float: left;"><a href="http://www.cr173.com/" target="_blank">西西软件园</a></li><li style="float: left;"><a href="http://www.97sky.cn/" target="_blank">就去天空</a></li><li style="float: left;"><a href="http://game.91.com/" target="_blank">91游戏网</a></li><li style="float: left;"><a href="http://www.xpgod.com/" target="_blank">系统天堂</a></li><li style="float: left;"><a href="http://mydown.yesky.com/" target="_blank">天极下载</a></li><li style="float: left;"><a href="http://zs.fang.com" target="_blank">房天下</a></li><li style="float: left;"><a href="http://www.azb22.com" target="_blank">化妆品代理</a></li><li style="float: left;"><a href="http://www.vipcn.com/" target="_blank">清风手游网</a></li><li style="float: left;"><a href="http://www.bianwanjia.com/" target="_blank">便玩家</a></li><li style="float: left;"><a href="http://www.yqdown.com/" target="_blank">友情手机站</a></li><li style="float: left;"><a href="http://www.9553.com/" target="_blank">9553下载</a></li><li style="float: left;"><a href="http://www.cr173.com/" target="_blank">西西软件园</a></li><li style="float: left;"><a href="http://www.97sky.cn/" target="_blank">就去天空</a></li><li style="float: left;"><a href="http://game.91.com/" target="_blank">91游戏网</a></li><li style="float: left;"><a href="http://www.xpgod.com/" target="_blank">系统天堂</a></li><li style="float: left;"><a href="http://mydown.yesky.com/" target="_blank">天极下载</a></li><li style="float: left;"><a href="http://zs.fang.com" target="_blank">房天下</a></li><li style="float: left;"><a href="http://www.azb22.com" target="_blank">化妆品代理</a></li><li style="float: left;"><a href="http://www.vipcn.com/" target="_blank">清风手游网</a></li><li style="float: left;"><a href="http://www.bianwanjia.com/" target="_blank">便玩家</a></li><li style="float: left;"><a href="http://www.yqdown.com/" target="_blank">友情手机站</a></li><li style="float: left;"><a href="http://www.9553.com/" target="_blank">9553下载</a></li><li style="float: left;"><a href="http://www.cr173.com/" target="_blank">西西软件园</a></li><li style="float: left;"><a href="http://www.97sky.cn/" target="_blank">就去天空</a></li><li style="float: left;"><a href="http://game.91.com/" target="_blank">91游戏网</a></li><li style="float: left;"><a href="http://www.xpgod.com/" target="_blank">系统天堂</a></li><li style="float: left;"><a href="http://mydown.yesky.com/" target="_blank">天极下载</a></li></ul>
+					</div>
+					<div class="msg">©&nbsp;&nbsp;亲亲宝贝网2003-2014 qinqinbaby.com All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公安网备11010802015478号 京ICP备11017831号</div>
+					<div class="tel" style="width:450px;text-align:center;"><span></span>客服热线：400-610-9993 周一~周日 9:00~21:00</div>
+					<ul>
+						<li><img src="../img/index-img/lice1.jpg" alt=""></li>
+						<li><img src="../img/index-img/lice3.jpg" alt=""></li>
+					</ul>	
+				</div>
+			
+		
+	</body>
+</html>

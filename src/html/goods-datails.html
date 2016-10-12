@@ -11,6 +11,7 @@
 		<script src="../assets/xcarousel/jquery.xcarousel.js"></script>
 		<script src="../js/goods-datails.js"></script>
 		<script src="../assets/jquery.jqzoom.js"></script>
+		<script src="../assets/jquery.cookie.js"></script>
 		<script>
 		jQuery(function($){
 			//文字轮播
@@ -44,7 +45,7 @@
 		})			
 		</script>
 	</head>
-	<body style="overflow-x: hidden;">
+	<body style="overflow-x: scroll;">
 		<!--大的div-->
 		<div class="goods-datails">
 						<!--共同的头部页面-->
@@ -131,7 +132,7 @@
 									<li style="border: 1px solid #0cc;">
 										<div class="smpic">
 											<a href="javasctipt:">
-												<img src="../img/goods-datails/147270228549460_63x63.jpg"/>
+												<img src="../img/goods-datails/147270228549460_63x63.jpg"  id="imgurl"/>
 											</a>
 										</div>
 									</li>
@@ -179,7 +180,8 @@
 			            <div class="content-main-zk-1"><span>￥</span>29.90</div>
 			            <div class="content-main-zk-2"><span> 4.4折</span></div>
 			            <div class="content-main-zk-3">
-			                <span>市场价：</span><span style="text-decoration: line-through">￥68.00  </span>
+			                <span>市场价：</span>
+			                <span style="text-decoration: line-through">￥68.00  </span>
 			                <span style="margin-left: 10px;">优惠：</span><span class="youhui">￥38.10</span>
 			            </div>
                     </div>
@@ -212,7 +214,7 @@
  					<!--点击购买-->
  					<div class="content-main-addshop">
  						<form action="" method="post">
- 							<input type="button" name="addbuy" id="addbuy" value="" style="width: 140px;height: 54px;background: none;cursor: pointer;display: inline-block;border: none;"/>
+ 							<input type="button" name="addbuy" id="addbuy" value=""/>
  						</form>
  					</div>
  					<!--发货店家-->

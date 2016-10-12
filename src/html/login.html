@@ -6,36 +6,46 @@
 		<title>登录-亲亲宝贝商城</title>
 		<link rel="stylesheet" type="text/css" href="../css/login.css" />
 		<script src="../js/jquery-1.12.0.js"></script>
-		<!--<script src="../js/login.js"></script>-->
 		<script src="../js/login2.js"></script>
 		<script src="../assets/jquery.cookie.js"></script>
 		<script>
 			$(function() {
-				$(".mj-login-sprite-btn").on("click", function() {
-					var $userName = $("#yzusername").val();
-					var $psw = $("#pass").val();
-					//设置cookie
-					$.cookie("userName", $userName, {
-						expries: 7
+			  	//获取输入框里面的值；
+			  	var userIput = $("#yzusername").val();
+			  	var passIput = $("#pass").attr("placeholder");
+			  	
+			  	//登录按钮；
+			  	var $submit = $(".login-submit");
+			  	//验证码显示；
+			  	var $take = $(".login-identifying");
+			  	//先初始化隐藏验证码；
+			  	$take.hide();
+			  	var flag = false;
+			  	var currentname ;
+				$(".login-submit").on("click",function(){
+					var myCk = JSON.parse($.cookie("userpass"));
+					$.each(myCk, function(idx,item) {
+						if(item.user == userIput){
+							if(item.psw = passIput){
+								flag = true;
+								conrrentName = item.user;
+							}
+						}
 					});
-					$.cookie("psw", $psw, {
-						expries: 7
-					});
-				});
-				//获取cookie
-				$("#member").on("click", function() {
-					var $userInfor = $.cookie("userName");
-					var $userPsw = $.cookie("psw");
-					if($(this).is(':checked')) {
-						$("#yzusername").val($userInfor);
-						$("#pass").val($userPsw);
-					}
+					if(flag){
+							$.cookie("loginCk",conrrentName,{expires: 7 ,path:'/'})
+							alert("恭喜，登录成功");
+						}else{
+							$take.show();
+							$("#pass").parent().next().html("帐号或密码错误");
+						}
 				})
+
 			})
 		</script>
 	</head>
 
-	<body>
+	<body style="overflow-x: scroll;">
 		<div class="login">
 			<!--login注册页头部-->
 			<div class="login-header">
@@ -53,6 +63,7 @@
 						<img src="../img/login/loginbigbg.png" width="480" height="353" />
 					</a>
 				</div>
+				<!--欢迎回来登录-->
 				<div class="login-infor">
 					<p class="login-tit"><span class="fb">
                                 亲亲宝贝商城
@@ -77,6 +88,7 @@
 						<a id="huanyizhang" class="login-cannot vm f12" style="cursor: pointer">换一张</a>
 					</p>
 					<span></span>
+					<!--点击登录  login-submit-->
 					<p id="tijiao" class="login-submit">
 						<input style="cursor: pointer" type="submit" class="mj-login-sprite-btn f16 yahei" value="登录"></p>
 					<span id="login"></span>
@@ -91,6 +103,7 @@
                             <a href="/project/src/html/register.html" class="link-register  vm f12" style="color: #f10180;">免费注册</a>
                         </span>
 					</p>
+					<!--合作网站-->
 					<div class="link-for-login mt30 f12 lh200">
 						<p class="red-line w"></p>
 						<p class="link-for-icon" style="position: relative; padding-left: 120px; margin-top: 20px;">
