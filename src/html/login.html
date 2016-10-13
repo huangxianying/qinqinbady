@@ -41,6 +41,9 @@
 							$take.show();
 							$("#pass").parent().next().html("帐号或密码错误");
 						}
+						
+						//阻止submit提交表单；
+						return false;
 				})
 
 			})
@@ -72,7 +75,7 @@
                </span> ,欢迎回来！请登录
 					</p>
 					<p class="login-usename">
-						<input id="yzusername" name="username" type="text" class="login-input" value="用户名/手机号/邮箱">
+						<input id="yzusername" name="username" type="text" class="login-input" value="用户名/手机号">
 						<!-- <label for="yzusername" class="">用户名/手机号/邮箱</label>-->
 					</p>
 					<p class="login-error" style="visibility: visible;">请输入您的登录名</p>
