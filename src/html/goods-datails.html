@@ -12,38 +12,6 @@
 		<script src="../js/goods-datails.js"></script>
 		<script src="../assets/jquery.jqzoom.js"></script>
 		<script src="../assets/jquery.cookie.js"></script>
-		<script>
-		jQuery(function($){
-			//文字轮播
-			$("#link").imgscroll({
-				speed: 40,
-				amount: 0,
-				width: 1,
-				dir: "left"
-			});
-			//显示隐藏小广告
-			$(document).scroll(function(){
-				var $scrollTop = $(window).scrollTop();
-				if($scrollTop == 0){
-					$(".ablet").fadeOut("slow");
-				}else if($scrollTop > 0){
-					$(".ablet").fadeIn("slow");
-				}
-			});
-				//回到顶部；
-			$("#goBack").on("click",function(){
-				$(document).scrollTop("0");
-			});
-			//放大镜
-			$(".jqzoom").jqueryzoom({
-				xzoom: 368, //放大图的宽度(默认是 200)
-				yzoom: 368, //放大图的高度(默认是 200)
-				offset: 10, //离原图的距离(默认是 10)
-				position: "right", //放大图的定位(默认是 "right")
-				preload: 1
-			});
-		})			
-		</script>
 	</head>
 	<body style="overflow-x: scroll;">
 		<!--大的div-->
@@ -204,7 +172,7 @@
                     	<div class="content-main-sl-1">数量：</div>
                     	<div class="content-main-sl-2">
                     		<span style="float: left;display: inline;cursor: pointer;background: #e3e3e3;" class="low hya">-</span>
-                    		<input size="3" class="buynum" value="1" type="text">
+                    		<input size="3" class="buynum" value="" type="text">
                     		<span style="background: #fff;cursor: pointer;" class="up">+</span>
                     	</div>
                     </div>

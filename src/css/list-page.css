@@ -21,7 +21,7 @@
 .goods-nav .page .procheckby>a b{width: 9px;height: 12px;display: inline-block;background: url(../img/list-img/arrow.png) no-repeat -11px 0;vertical-align: middle;}
 .goods-nav .page .procheckby>a:hover b{background: url(../img/list-img/arrow.png) no-repeat 0 0 ;}
 .goods-main .goods-nav .page .procheckby .just-have{width: 110px;height: 30;margin-left: 10px;}
-.page-inner{width: 330px;height: 32px;float: right;}
+.page-inner{height: 32px;float: right;}
 .page-inner>a{display: inline-block;width: 30px;height: 30px;border: 1px solid #ccc;color:#666;line-height: 30px;text-align: center;}
 .page-inner>a:hover{border: 1px solid #73dff4;color: #14b3c9;}
 .page-inner .page-first{border: 1px solid #969696;font-size: 14px;font-weight: bold;color: #707070;}

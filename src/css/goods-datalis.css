@@ -60,7 +60,9 @@
 /*sm*/
 .content-main-sm{font-size: 12px;height: 44px;line-height: 44px;margin-left: 70px;}
 /*addshop*/
-.content-main-addshop{float: left;width: 140px;display: inline;height: 54px;background: url(../img/goods-datails/mian.png) -860px -946px no-repeat;cursor: pointer;margin-top: 14px;}
+.content-main-addshop{float: left;display: inline;height: 54px;cursor: pointer;margin-top: 14px;}
+#addbuy{width: 140px;height: 54px;background: none;cursor: pointer;display: inline-block;border: none;background: url(../img/goods-datails/mian.png) -860px -946px no-repeat;float: left;}
+
 /*share*/
 .content-main-share2{width: 530px;height: 44px;line-height: 44px;font-size: 12px;font-family: "宋体";color: #999;float: left;}
 .content-main-share2 span{color: #5ca1e5;display: inline-block;}

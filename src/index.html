@@ -6,47 +6,14 @@
         </title>
         <link rel="stylesheet" type="text/css" href="css/index-style.css"/>
         <link rel="stylesheet" type="text/css" href="css/common.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/xcarousel/jquery.xcarousel.css"/>
-        
-	<script src="js/jquery-1.12.0.js"></script>
-	<script src="assets/jquery.scrolltxt.js"></script>
-	<script src="assets/xcarousel/jquery.xcarousel.js"></script>
-	<script>
-		jQuery(function($){
-			//文字轮播
-			$("#link").imgscroll({
-				speed: 40,
-				amount: 0,
-				width: 1,
-				dir: "left"
-			});
-			//图片轮播；
-			$(".homemain").find(".phone_inner").xcarousel({
-				width:236,
-				height:421,
-				page:true,//是否显示页码
-				autoPlay:true,//是否自动轮播
-				type:'x',//动画类型：水平滚动x, 垂直滚动y, 渐现效果fade
-				buttons:false,//是否显示前后按钮
-				speed:1500,//轮播图速度
-			})
-			//显示隐藏小广告
-			$(document).scroll(function(){
-				var $scrollTop = $(window).scrollTop();
-				if($scrollTop == 0){
-					$(".ablet").fadeOut("slow");
-				}else if($scrollTop > 0){
-					$(".ablet").fadeIn("slow");
-				}
-			});
-				//回到顶部；
-			$("#goBack").on("click",function(){
-				$(document).scrollTop("0");
-			})
-		})
-	</script>
+        <link rel="stylesheet" type="text/css" href="assets/xcarousel/jquery.xcarousel.css"/>     
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/index.js"></script>
+		<script src="assets/jquery.scrolltxt.js"></script>
+		<script src="assets/xcarousel/jquery.xcarousel.js"></script>
+		<script src="assets/jquery.cookie.js"></script>
 	</head>
-	<body style="overflow-x: hidden;">
+	<body style="overflow-x: scroll;">
 		<div id="index-main">
 			<!--共同的头部页面-->
 			<div class="commonhead">
@@ -57,7 +24,7 @@
 						<dl class="s1">
 							<dt>你好，欢迎来到亲亲宝贝！请</dt>
 							<dd>
-								 <a href="" id="user">登录</a><span>|</span><a href="">免费注册</a>
+								 <a href="/project/src/html/login.html" id="user" target="_blank">登录</a><span>|</span><a href="/project/src/html/register.html" target="_blank">免费注册</a>
 							</dd>
 						</dl>
 						<dl  class="tel">
@@ -83,7 +50,7 @@
 						</form>
 						<div class="sn_nav">
 							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%AE%9D%E5%AE%9D%E7%8E%A9%E5%85%B7" style="color: #f00;">宝宝玩具</a><span>|</span>
-							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%A5%B6%E7%B2%89">奶粉</a><span>|</span>
+							<a href="/project/src/html/list-page.html" target="_blank">奶粉</a><span>|</span>
 							<a href="http://www.qinqinbaby.com/home/search/index/content/%E8%BE%85%E9%A3%9F%E8%90%A5%E5%85%BB">辅助营养</a><span>|</span>
 							<a href="http://www.qinqinbaby.com/home/search/index/content/%E5%B0%BF%E8%A3%A4">尿裤</a><span>|</span>
 							<a href="http://www.qinqinbaby.com/home/search/index/content/%E6%B9%BF%E5%B7%BE">湿巾</a>

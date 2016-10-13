@@ -7,10 +7,6 @@ $(function(){
 		$(this).val("");
 		$(this).css("color","#000");
 	})
-	//性别验证；
-//	$(".login-sex input").on("click",function(){
-//		registerSexTake();
-//	})
 	//密码验证；
 	$(".register-password").on("blur","input",function(){
 		registerPswTake();
@@ -32,7 +28,7 @@ function registernNameTake(){
 	var name = $(".login-form .login-tel").val();
 	var newurl = window.location.host;
 	
-	flag = 0;
+	flag = false;
 	$.ajax({
 		url : "http://"+newurl+"/Home/Passport/checkName",
 		data:"name="+name,
@@ -62,13 +58,7 @@ function registernNameTake(){
 		return true;
 	}
 }
-//性别验证；不能为空；
-//	function registerSexTake(){
-//		var $radio = $(".login-sex input");
-//		if($radio.checked == ""){
-//		$this.parent().next().css("visibility","visible");	
-//		}
-//	}
+
 //密码验证(密码为字母和数字的组合长度是6-20)；
 	function registerPswTake(){
 		var $this = $(".register-password input");

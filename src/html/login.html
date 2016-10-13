@@ -34,7 +34,9 @@
 					});
 					if(flag){
 							$.cookie("loginCk",conrrentName,{expires: 7 ,path:'/'})
+							$take.hide();
 							alert("恭喜，登录成功");
+							location.href = "../index.html";
 						}else{
 							$take.show();
 							$("#pass").parent().next().html("帐号或密码错误");
@@ -66,7 +68,7 @@
 				<!--欢迎回来登录-->
 				<div class="login-infor">
 					<p class="login-tit"><span class="fb">
-                                亲亲宝贝商城
+                                                             亲亲宝贝商城
                </span> ,欢迎回来！请登录
 					</p>
 					<p class="login-usename">

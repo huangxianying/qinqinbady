@@ -10,7 +10,7 @@ body{font-family: "微软雅黑";color: #666;font-size: 12px;}
 /*commonhead头部logo等*/
 .commonhead{width: 100%;height: 110px;position: relative;}
 .commonhead .headmian{width: 1080px;height: 110px;position: absolute;left: 50%;margin-left: -540px;}
-.commonhead .headmian .shortcut{width: 462px;height: 32px;line-height: 32px;float: right;}
+.commonhead .headmian .shortcut{height: 32px;line-height: 32px;float: right;}
 .commonhead .headmian .shortcut>dl{float: left;}
 .commonhead .headmian .shortcut .s1 dt,dd{float: left;}
 .commonhead .headmian .shortcut .s1 dd{margin-left: 4px;}

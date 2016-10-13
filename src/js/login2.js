@@ -141,16 +141,6 @@ function logingetIdentifying() {
 			}
 		})
 	})
-//	//验证码
-//var src = $('#verifyimage').attr('src');
-//$(function() {
-//	$('#verifyimage').attr('src', src + '?' + Math.random());
-//});
-////换一张
-//$('#verifyimage,#huanyizhang').click(function() {
-//	$("#verifyimage").attr('src', src + '?' + Math.random());
-//});
-// 失去焦点
 
 function focus() {
 
