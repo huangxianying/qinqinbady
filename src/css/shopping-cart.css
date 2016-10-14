@@ -75,7 +75,7 @@ li .del-goods:hover{color: #f00;}
 /*优惠价格*/
 .fav-price{width: 998px;height: 178px;border: 1px solid #ccc;margin: 0 auto;}
 .youhuijuan{width: 600px;}
-.youhuijuan>button{width: 114px;height: 30px;border: 1px solid #ee6a1a;border-radius: 3px;background:url(../img/shopping-cart-img/购物车_10.png) no-repeat center center;cursor: pointer;margin-top: 10px;margin-left: 20px;}
+.youhuijuan>button{width: 114px;height: 30px;border: 1px solid #ee6a1a;border-radius: 3px;background:url(../img/shopping-cart-img/youhui.png) no-repeat center center;cursor: pointer;margin-top: 10px;margin-left: 20px;}
 .huiyuan{position: relative;top: 100px;color: #f00;left: 24px;}
 
 .goods-youhui{float: right;width: 164px;height: 100px;margin-right: 18px;}
